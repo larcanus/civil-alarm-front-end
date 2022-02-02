@@ -1,0 +1,66 @@
+<div class="container page">
+  <h3 class="text-xs-center">Активируйте и сохраните фильтры по которым будет происходить поиск</h3>
+
+  <div class="filter-div">
+    <app-list-errors [errors]="errors"></app-list-errors>
+    <form [formGroup]="filterForm" (ngSubmit)="onSubmitFormFilter()">
+      <fieldset class="form-group">
+        <div class="filter-set-div">
+          <h4>Фильтр №1</h4>
+          <input
+            formControlName="filter_first"
+            placeholder="текст для поиска"
+            class="form-control"
+            type="text"/>
+          <label for="subject_choice_first">субъект:</label>
+          <select formControlName="subjects_first" id="subject_choice_first">
+            <option *ngFor="let item of subjectList" value="{{ item }}">{{ item }}</option>
+          </select>
+          <input [checked]="isActive_1" id="isActive_1" (change)="onChangeActiveFilter($event)" class="checkbox"
+                 type="checkbox">
+          <h4>{{ isActive_1 ? 'активен' : 'выключен' }}</h4>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <div class="filter-set-div">
+          <h4>Фильтр №2</h4>
+          <input
+            formControlName="filter_second"
+            placeholder="текст для поиска"
+            class="form-control"
+            type="text"/>
+          <label for="subject_choice_second">субъект:</label>
+          <select formControlName="subjects_second" id="subject_choice_second">
+            <option *ngFor="let item of subjectList" value="{{ item }}">{{ item }}</option>
+          </select>
+
+          <input [checked]="isActive_2" id="isActive_2" (change)="onChangeActiveFilter($event)" type="checkbox">
+          <h4>{{ isActive_2 ? 'активен' : 'выключен' }}</h4>
+        </div>
+      </fieldset>
+      <button class="btn-save" type="submit">
+        Сохранить
+      </button>
+    </form>
+    <h4 class="save-done-h4" [hidden]="!isSubmitting">Успешно сохранено</h4>
+  </div>
+  <section class="section-advise">
+    <div class="div-1">
+      <div class="div-2">
+        <div class="div-3">
+          <p><i><b>Советы</b></i></p>
+          <p>
+            1. Самым лучшим фильтром будет фамилия в именительном падеже. Имя и отчество, в материалах дела,
+            могут быть использованы в сокращенном виде поэтому вариативность поиска будет увеличина.
+          </p>
+          <p>
+            2. Если фамилия или текст имеет частую употребляемость, то вы получите тысячи результатов.
+            Например на фамилию "Петров".
+            В таких случаях обязательно укажите субьект.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

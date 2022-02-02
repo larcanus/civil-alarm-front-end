@@ -1,0 +1,70 @@
+button {
+  cursor: pointer;
+}
+
+.profile-page {
+  .profile-div {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 50%;
+    margin-left: 25%;
+
+    .text-xs-center {
+      text-align: center !important;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+      font-family: inherit;
+      font-weight: 500;
+      line-height: 1.1;
+      color: inherit;
+      text-align: center !important;
+    }
+
+    fieldset {
+      min-width: 0;
+      padding: 0;
+      margin: 0;
+      border: 0;
+
+      button:disabled {
+        cursor: inherit;
+      }
+
+      .btn-profile-psw-edit {
+        float: left;
+      }
+
+      .btn-profile-save {
+        float: right;
+      }
+
+      .form-control {
+        display: block;
+        width: 95%;
+        padding: .5rem .75rem;
+        font-size: 1rem;
+        line-height: 1.25;
+        color: #55595c;
+        background-color: #fff;
+        background-image: none;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: .25rem;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  }
+
+  h4 {
+    color: #5fa854;
+    float: right;
+  }
+}

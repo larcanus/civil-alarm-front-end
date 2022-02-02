@@ -1,0 +1,57 @@
+<div class="profile-page">
+  <div class="container page">
+    <div class="row">
+
+      <div class="profile-div">
+        <h3 class="text-xs-center">
+          Ваши данные
+        </h3>
+
+        <app-list-errors [errors]="errors"></app-list-errors>
+        <form [formGroup]="profileForm">
+          <fieldset [disabled]="isSubmitting">
+            <fieldset class="form-group">
+              <input
+                formControlName="name"
+                placeholder="Name"
+                class="form-control form-control-lg"
+                type="text"/>
+            </fieldset>
+            <fieldset class="form-group">
+              <input
+                autocomplete="off"
+                formControlName="email"
+                placeholder="Email"
+                class="form-control form-control-lg"
+                type="text"/>
+            </fieldset>
+            <button class="btn-profile-psw-edit" [hidden]="isPswEdit" (click)="isPswEdit=true">
+              Сменить пароль
+            </button>
+            <fieldset class="form-group" [hidden]="!isPswEdit">
+              <input
+                autocomplete="new-password"
+                formControlName="password_1"
+                placeholder="new password"
+                class="form-control form-control-lg"
+                type="password"/>
+            </fieldset>
+            <fieldset class="form-group" [hidden]="!isPswEdit">
+              <input
+                autocomplete="new-password"
+                formControlName="password_2"
+                placeholder="new password again"
+                class="form-control form-control-lg"
+                type="password"/>
+            </fieldset>
+            <button class="btn-profile-save" [disabled]="!profileForm.valid" (click)="submitForm()" type="submit">
+              Сохранить
+            </button>
+          </fieldset>
+        </form>
+        <h4 [hidden]="!isSubmitting">Успешно сохранено</h4>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<nav class="navbar">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">CivilAlarm</a>
+
+    <!-- Show this for logged out users -->
+    <ul *appShowAuthed="false"
+        class="nav navbar-nav pull-xs-right">
+
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/">
+          Главная
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/login"
+           routerLinkActive="active">
+          Войти
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/register"
+           routerLinkActive="active">
+          Регистрация
+        </a>
+      </li>
+
+    </ul>
+
+    <!-- Show this for logged in users -->
+    <ul *appShowAuthed="true"
+        class="nav navbar-nav pull-xs-right">
+
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/"
+           routerLinkActive="active">
+          <!--          [routerLinkActiveOptions]="{ exact: true }">-->
+          Главная
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/filters"
+           routerLinkActive="active">
+          <i class="ion-compose"></i>Фильтры
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/notices"
+           routerLinkActive="active">
+          <i class="ion-compose"></i>Уведомления
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <div class="dropdown">
+          <button class="dropbtn">
+            <i class="fa fa-caret-down"></i>{{ currentUser.name }}
+          </button>
+          <div class="dropdown-content">
+            <a routerLink="/profile"
+               routerLinkActive="active">Профиль</a>
+            <a routerLink="/"
+               routerLinkActive="active" (click)="onLogOut()">Выйти</a>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</nav>
