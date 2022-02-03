@@ -2,13 +2,12 @@
 .filter-div {
   position: relative;
   min-height: 180px;
-  padding-right: 15px;
-  padding-left: 15px;
   max-width: 100%;
   margin-top: 50px;
 
   form {
     height: 180px;
+    margin-left: 60px;
   }
 
   fieldset {
@@ -40,7 +39,7 @@
   .btn-save {
     user-select: none;
     position: absolute;
-    right: 45%;
+    right: 46%;
     margin-top: 10px;
     cursor: pointer;
   }
@@ -91,7 +90,7 @@ select {
 .save-done-h4 {
   color: #7ddc6e;
   position: absolute;
-  left: 43.5%;
+  left: 30.5rem;
 }
 
 .section-advise {
