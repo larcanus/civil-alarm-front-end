@@ -18,9 +18,8 @@
 //////////////////////////////////
 .section-how-works {
   -webkit-text-size-adjust: 100%;
-  font-size: 1rem;
   line-height: 1.6;
-  font-family: 'Open Sans', sans-serif;
+  font: 400 16px/28px Roboto, "Helvetica Neue", sans-serif;
   --effect-scale: 1.1;
   text-align: center;
   color: #111111;
@@ -87,7 +86,6 @@
   -webkit-text-size-adjust: 100%;
   font-size: 1rem;
   line-height: 1.6;
-  font-family: 'Open Sans', sans-serif;
   --effect-scale: 1.1;
   text-align: center;
   color: #111111;
@@ -112,13 +110,20 @@
       .div-3 {
         margin-left: 30px;
         margin-right: 30px;
+
         img {
           height: 40px;
           float: left;
           margin-top: -5px;
         }
-        h3{
+
+        h3 {
           margin: 20px;
+          font: 400 16px/28px Roboto, "Helvetica Neue", sans-serif;
+        }
+
+        pre {
+          font: 400 16px/28px Roboto, "Helvetica Neue", sans-serif;
         }
       }
     }
