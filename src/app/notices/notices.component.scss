@@ -1,4 +1,12 @@
-
+.container-notices{
+  max-width: 1840px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 90%;
+}
 .notices-div {
   position: relative;
   min-height: 1px;
@@ -110,8 +118,11 @@ table {
             }
 
             span {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
               margin-left: 5px;
-              width: 480px;
+              width: 1300px;
               display: inline-block;
             }
           }

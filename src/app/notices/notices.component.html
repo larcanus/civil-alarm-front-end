@@ -1,4 +1,4 @@
-<div class="container page">
+<div class="container-notices">
   <h3>Результаты запросов по вашим фильтрам</h3>
 
   <div class="notices-div">
@@ -15,8 +15,8 @@
                [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
             <div class="div-element-block" *ngFor="let res of element.results">
               <div class="div-element-text">
-                <b>{{ res.name }}</b>-
                 <span>
+                  <b>{{ res.name }}</b>-
                   {{ res.additionalFields[ 3 ] ? res.additionalFields[ 3 ].value : 'нет данных' }},&ensp;
                   {{ res.additionalFields[ 4 ] ? res.additionalFields[ 4 ].value : 'нет данных о суде' }}
                 </span>
