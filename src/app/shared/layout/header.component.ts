@@ -8,7 +8,7 @@ import { User } from '../../core/models';
   changeDetection: ChangeDetectionStrategy.OnPush
 } )
 export class HeaderComponent implements OnInit {
-  currentUser: User | {name:string};
+  currentUser: User | { name: string };
 
   constructor(
     private userService: UserService,

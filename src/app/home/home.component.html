@@ -1,72 +1,98 @@
 <div class="home-page">
 
-  <div class="banner">
-    <div class="container">
-      <h1>Сервис для оповещения граждан РФ о появлении их в системе правосудия.</h1>
-      <div>
-        <h3>Поможет вам заранее подготовиться к предстоящему производству до повестки в суд или узнать о самом факте
-          вашего участия.</h3>
+  <div class="container-fluid container-banner">
+    <div class="container px-4 px-md-3 container-div-1">
+      <div class="row align-items-lg-center">
+        <div class="col-md-8 order-md-1 col-lg-7 text-center text-md-start">
+          <h1>Сервис для оповещения граждан РФ о появлении их в системе правосудия.</h1>
+          <h3>Поможет вам заранее подготовиться к предстоящему производству до повестки в суд или узнать о самом факте
+            вашего участия.</h3>
+        </div>
+        <div class="col-8 mx-auto col-md-4 order-md-2 col-lg-5">
+          <img [src]="'assets/icons/ontime400.png'" class="img-fluid mb-3 mb-md-0">
+        </div>
       </div>
     </div>
   </div>
 
   <section class="section-how-works">
-    <div class="div-1">
-      <div class="div-2">
-        <h2> Как это работает? </h2>
-        <div class="div-3">
-          <div class="div-4">
-            <div class="div-5">
-                  <span>
-                    <img [src]="'assets/icons/reg-150x150.png'" alt="reg">
-                  </span>
-              <h5>Регистрация и создание</h5>
-              <p>Вы создаете профиль с личной почтой и фильтры по которым будет происходить поиск.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="text-center text-uppercase mb-2 h2-how">Как это работает?</h2>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col col-lg-3 div-col">
+          <div class="card">
+            <div class="d-flex justify-content-center">
+              <img [src]="'assets/icons/reg-150x150.png'" alt="reg" class="div-img">
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title text-center">Регистрация и создание</h3>
+              <p class="card-text text-center">
+                Вы создаете профиль с почтой и фильтры по которым будет происходить поиск.
+              </p>
             </div>
           </div>
-          <div class="div-4">
-            <div class="div-5">
-                  <span>
-                    <img [src]="'assets/icons/search-150x150.png'" alt="reg">
-                  </span>
-              <h5>Ежденевный поиск</h5>
-              <p>Ежеденевно по вашим фильтрам будет происходит поиск в базе правосудия.</p>
+        </div>
+        <div class="col col-lg-3 div-col">
+          <div class="card">
+            <div class="d-flex justify-content-center">
+              <img [src]="'assets/icons/search-150x150.png'" alt="reg" class="div-img">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title text-center">Ежденевный поиск</h3>
+              <p class="card-text text-center">
+                Каждый день по вашим фильтрам будет происходит поиск в базе правосудия.
+              </p>
             </div>
           </div>
-          <div class="div-4">
-            <div class="div-5">
-                  <span>
-                    <img [src]="'assets/icons/email-150x150.png'" alt="reg">
-                  </span>
-              <h5>Оповещение</h5>
-              <p>Если найдутся результаты - вы сразу будете оповещены через указанную почту.</p>
+        </div>
+        <div class="col col-lg-3 div-col">
+          <div class="card">
+            <div class="d-flex justify-content-center">
+              <img [src]="'assets/icons/email-150x150.png'" alt="reg" class="div-img">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title text-center">Оповещение</h3>
+              <p class="card-text text-center">
+                Если найдутся результаты - вы сразу будете оповещены через указанную почту.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <section class="section-where">
-    <div class="div-1">
-      <div class="div-2">
+    <div class="container-fluid">
+      <div class="div-1">
         <div class="div-3">
-          <img [src]="'assets/icons/note.png'" alt="reg">
+          <div class="d-flex justify-content-center">
+            <img [src]="'assets/icons/note.png'" alt="reg">
+          </div>
           <h3>
             Поиск осуществляется с помощью запросов к публичной ГАС РФ "Правосудие". На
             основании и в соответствии с требованиями действующего законодательства РФ, в том
             числе:
             <pre>
-            – Конституции Российской Федерации;
-            – Гражданского кодекса Российской Федерации;
-            – Уголовно-процессуального кодекса Российской Федерации;
-            – Гражданского процессуального кодекса Российской Федерации;
-            – Кодекса Российской Федерации об административных правонарушениях;
-            – Федерального закона от 27.07.2006 № <a href='http://www.consultant.ru/document/cons_doc_LAW_61801/'>152-ФЗ</a> «О персональных данных»;
-            – Федерального закона от 22.12.2008 № <a href='http://www.consultant.ru/document/cons_doc_LAW_82839/'>262-ФЗ</a> «Об обеспечении доступа к информации одеятельности судов в РФ»;
-            – Закона РФ от 27.12.1991 № 2124-1 «О средствах массовой информации»;
-            – Федерального закона от 27.07.2006 № <a href='http://www.consultant.ru/document/cons_doc_LAW_61798/'>149-ФЗ</a> «Об информации, информационных
-            технологиях и о защите информации»;
-            </pre>
+                – Конституции Российской Федерации;
+                – Гражданского кодекса Российской Федерации;
+                – Уголовно-процессуального кодекса Российской Федерации;
+                – Гражданского процессуального кодекса Российской Федерации;
+                – Кодекса Российской Федерации об административных правонарушениях;
+                – Федерального закона от 27.07.2006 № <a
+              href='http://www.consultant.ru/document/cons_doc_LAW_61801/'>152-ФЗ</a> «О персональных данных»;
+                – Федерального закона от 22.12.2008 № <a
+              href='http://www.consultant.ru/document/cons_doc_LAW_82839/'>262-ФЗ</a> «Об обеспечении доступа к информации одеятельности судов в РФ»;
+                – Закона РФ от 27.12.1991 № 2124-1 «О средствах массовой информации»;
+                – Федерального закона от 27.07.2006 № <a
+              href='http://www.consultant.ru/document/cons_doc_LAW_61798/'>149-ФЗ</a> «Об информации, информационных
+                технологиях и о защите информации»;
+                </pre>
           </h3>
           <h3>
             Конституция России гарантирует гласность судопроизводства, а действующий с 2010 года Федеральный закон
@@ -77,6 +103,41 @@
       </div>
     </div>
   </section>
+
+  <!--  <section class="section-where">-->
+  <!--    <div class="div-1">-->
+  <!--      <div class="div-2">-->
+  <!--        <div class="div-3">-->
+  <!--          <img [src]="'assets/icons/note.png'" alt="reg">-->
+  <!--          <h3>-->
+  <!--            Поиск осуществляется с помощью запросов к публичной ГАС РФ "Правосудие". На-->
+  <!--            основании и в соответствии с требованиями действующего законодательства РФ, в том-->
+  <!--            числе:-->
+  <!--            <pre>-->
+  <!--            – Конституции Российской Федерации;-->
+  <!--            – Гражданского кодекса Российской Федерации;-->
+  <!--            – Уголовно-процессуального кодекса Российской Федерации;-->
+  <!--            – Гражданского процессуального кодекса Российской Федерации;-->
+  <!--            – Кодекса Российской Федерации об административных правонарушениях;-->
+  <!--            – Федерального закона от 27.07.2006 № <a-->
+  <!--              href='http://www.consultant.ru/document/cons_doc_LAW_61801/'>152-ФЗ</a> «О персональных данных»;-->
+  <!--            – Федерального закона от 22.12.2008 № <a-->
+  <!--              href='http://www.consultant.ru/document/cons_doc_LAW_82839/'>262-ФЗ</a> «Об обеспечении доступа к информации одеятельности судов в РФ»;-->
+  <!--            – Закона РФ от 27.12.1991 № 2124-1 «О средствах массовой информации»;-->
+  <!--            – Федерального закона от 27.07.2006 № <a-->
+  <!--              href='http://www.consultant.ru/document/cons_doc_LAW_61798/'>149-ФЗ</a> «Об информации, информационных-->
+  <!--            технологиях и о защите информации»;-->
+  <!--            </pre>-->
+  <!--          </h3>-->
+  <!--          <h3>-->
+  <!--            Конституция России гарантирует гласность судопроизводства, а действующий с 2010 года Федеральный закон-->
+  <!--            «Об обеспечении доступа к информации о деятельности судов в РФ»-->
+  <!--            обязывает публиковать на сайтах судов <b>почти</b> все выносимые ими решения, приговоры и иные акты.-->
+  <!--          </h3>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </section>-->
 
   <div class="container">
   </div>
