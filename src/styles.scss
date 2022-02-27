@@ -1,9 +1,64 @@
-.container-head{
+.container-head {
   background-color: #538bde;
 }
+
 .dropdown-item:focus, .dropdown-item:hover {
   color: #1e2125;
   background-color: #538bde;
+}
+
+.a-nav-link {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+
+footer {
+  a {
+    color: #888;
+    font-family: 'avenir next', 'helvetica neue', 'helvetica', 'helvetica', 'arial',
+    sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    text-decoration: none
+  }
+
+  .help-span {
+    color: #888;
+    font-size: 100%;
+    font-weight: bold;
+    line-height: 1.65;
+    font-family: 'avenir next', 'helvetica neue', 'helvetica', 'helvetica', 'arial', sans-serif;
+  }
+
+  .attribution {
+    color: #888;
+    font-size: 100%;
+    font-weight: bold;
+    line-height: 1.65;
+    font-family: 'avenir next', 'helvetica neue', 'helvetica', 'helvetica', 'arial', sans-serif;
+  }
+
+  .version {
+    color: #888;
+    font-size: 100%;
+    font-weight: bold;
+    line-height: 1.65;
+    font-family: 'avenir next', 'helvetica neue', 'helvetica', 'helvetica', 'arial', sans-serif;
+  }
+}
+
+
+.div-question-form {
+  text-align: center;
+}
+
+.div-title-form {
+  margin-top: 4rem;
+  text-align: center;
 }
 
 //body {
@@ -77,58 +132,7 @@
 //}
 //
 //
-//footer {
-//  left: 0;
-//  right: 0;
-//  background: #b2c1de;
-//  margin-top: 3rem;
-//  padding: 1rem 0;
-//  width: 100%;
-//  position: fixed;
-//  bottom: 0;
-//  top: 90%;
-//
-//  .container {
-//    text-align: center;
-//
-//    .logo-font {
-//      color: #010409;
-//      text-decoration: none;
-//    }
-//  }
-//
-//  a {
-//    color: #888;
-//    font-family: 'avenir next', 'helvetica neue', 'helvetica', 'helvetica', 'arial',
-//    sans-serif;
-//    font-size: 100%;
-//    font-weight: bold;
-//    line-height: 1.65;
-//    margin: 0;
-//    padding: 0;
-//    text-decoration: none
-//  }
-//
-//  .help-span {
-//    color: #888;
-//    font-size: 100%;
-//    font-weight: bold;
-//    line-height: 1.65;
-//    font-family: 'avenir next', 'helvetica neue', 'helvetica', 'helvetica', 'arial', sans-serif;
-//    position: absolute;
-//    right: 10px;
-//  }
-//
-//  .version {
-//    position: absolute;
-//    left: 10px;
-//    color: #888;
-//    font-size: 100%;
-//    font-weight: bold;
-//    line-height: 1.65;
-//    font-family: 'avenir next', 'helvetica neue', 'helvetica', 'helvetica', 'arial', sans-serif;
-//  }
-//}
+
 //
 //.auth-page {
 //  .auth-div {

@@ -1,127 +1,25 @@
-
-.filter-div {
-  position: relative;
-  min-height: 180px;
-  max-width: 100%;
-  margin-top: 50px;
-
-  form {
-    height: 180px;
-    margin-left: 60px;
-  }
-
-  fieldset {
-    min-width: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    display: grid;
-
-    .form-control {
-      width: 30%;
-      padding: .5rem .75rem;
-      margin: 0 2rem 0 2rem;
-      font-size: 1rem;
-      line-height: 1.25;
-      color: #55595c;
-      background-color: #fff;
-      background-image: none;
-      background-clip: padding-box;
-      border: 1px solid rgba(0, 0, 0, .15);
-      border-radius: .25rem;
-    }
-  }
-
-  .form-group {
-    margin-bottom: 1rem;
-  }
-
-  .btn-save {
-    user-select: none;
-    position: absolute;
-    right: 46%;
-    margin-top: 10px;
-    cursor: pointer;
-  }
+.h1-tittle{
+  margin-top: 4rem;
+  font-weight: bold;
+  line-height: 1.65;
+  font-family: 'avenir next', 'helvetica neue', 'helvetica', 'helvetica', 'arial', sans-serif;
 }
 
-.text-xs-center {
-  text-align: center !important;
+.input-text-filter{
+  min-width: 190px;
+}
+.select-filter{
+  min-width: 190px;
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit;
-  margin-top: 3.5rem;
+.span-filter{
+  min-width: 112px;
 }
 
-.filter-set-div {
-  h4 {
-    display: inline-block;
-  }
-}
-
-input[type='checkbox'] {
-  margin: 0.4rem 0.4rem 0.4rem 0.4rem;
-  box-shadow: 0 0 0 1px #dc6e6e;
-
-  + h4 {
-    color: #dc6e6e
-  }
-}
-
-input[type='checkbox']:checked {
-  box-shadow: 0 0 0 1px #7ddc6e;
-
-  + h4 {
-    color: #7ddc6e
-  }
-}
-
-select {
-  margin: 0 1rem 0 1rem;
-  width: 30%;
+.div-switch{
+  min-width: 9rem;
 }
 
 .save-done-h4 {
-  color: #7ddc6e;
-  position: absolute;
-  left: 30.5rem;
-}
-
-.section-advise {
-  -webkit-text-size-adjust: 100%;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-family: 'Open Sans', sans-serif;
-  --effect-scale: 1.1;
-  text-align: center;
-  color: #111111;
-  background-image: none;
-  margin-top: 30px;
-
-  .div-1 {
-    position: relative;
-    margin: 0 auto;
-    width: 90%;
-    height: 220px;
-
-    .div-2 {
-      background-color: #ffffff;
-      top: 10%;
-      position: inherit;
-      border: 3px solid #e3d278;
-      height: 180px;
-      border-radius: 30px;
-      text-align: start;
-
-      .div-3 {
-        margin: 15px;
-      }
-    }
-  }
+  color: #589e4f;
 }

@@ -1,45 +1,53 @@
-<div class="auth-page">
-  <div class="container page">
-    <div class="row">
+<div class="container">
+  <div class="vh-100">
 
-      <div class="auth-div">
-        <h1 class="text-xs-center">{{ title }}</h1>
-        <p class="text-xs-center">
-          <a [routerLink]="['/login']" *ngIf="authType == 'register'">Уже есть аккаунт?</a>
-          <a [routerLink]="['/register']" *ngIf="authType == 'login'">Хотите зарегистрироваться?</a>
-        </p>
-        <app-list-errors [errors]="errors"></app-list-errors>
-        <form [formGroup]="authForm" (ngSubmit)="submitForm()">
-          <fieldset [disabled]="isSubmitting">
-            <fieldset class="form-group">
-              <input
-                formControlName="name"
-                placeholder="Name"
-                class="form-control form-control-lg"
-                type="text"
-                *ngIf="authType == 'register'"/>
-            </fieldset>
-            <fieldset class="form-group">
-              <input
-                formControlName="email"
-                placeholder="Email"
-                class="form-control form-control-lg"
-                type="text"/>
-            </fieldset>
-            <fieldset class="form-group">
-              <input
-                formControlName="password"
-                placeholder="Password"
-                class="form-control form-control-lg"
-                type="password"/>
-            </fieldset>
-            <button class="btn-lg" [disabled]="!authForm.valid" type="submit">
-              {{ title }}
-            </button>
-          </fieldset>
-        </form>
+    <div class="d-grid justify-content-center">
+      <div class="align-items-start flex-column bd-highlight mb-3">
+        <div class="bd-highlight div-title-form">
+          <h1 class="">{{ title }}</h1>
+        </div>
+
+        <div class="div-question-form">
+          <p class="bd-highlight">
+            <a [routerLink]="['/login']" *ngIf="authType == 'register'">Уже есть аккаунт?</a>
+            <a [routerLink]="['/register']" *ngIf="authType == 'login'">Или регистрация?</a>
+          </p>
+        </div>
+
+        <div>
+          <app-list-errors [errors]="errors"></app-list-errors>
+        </div>
       </div>
-
     </div>
+
+    <form [formGroup]="authForm" (ngSubmit)="submitForm()" class="d-flex justify-content-center">
+      <fieldset [disabled]="isSubmitting">
+        <fieldset class="mb-3">
+          <input
+            formControlName="name"
+            placeholder="Name"
+            class="form-control"
+            type="text"
+            *ngIf="authType == 'register'"/>
+        </fieldset>
+        <fieldset class="mb-3">
+          <input
+            formControlName="email"
+            placeholder="Email"
+            class="form-control"
+            type="text"/>
+        </fieldset>
+        <fieldset class="mb-3">
+          <input
+            formControlName="password"
+            placeholder="Password"
+            class="form-control"
+            type="password"/>
+        </fieldset>
+        <button class="btn-sm" [disabled]="!authForm.valid" type="submit">
+          Отправить
+        </button>
+      </fieldset>
+    </form>
   </div>
 </div>

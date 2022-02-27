@@ -12,17 +12,17 @@
           <!-- Show this for logged out users -->
           <ul *appShowAuthed="false" class="navbar-nav flex-row flex-wrap ms-md-auto">
             <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link active" aria-current="page" routerLink="/">
+              <a class="nav-link active a-nav-link" aria-current="page" routerLink="/">
                 Главная
               </a>
             </li>
             <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link active" aria-current="page" routerLink="/login" routerLinkActive="active">
+              <a class="nav-link active a-nav-link" aria-current="page" routerLink="/login" routerLinkActive="active">
                 Войти
               </a>
             </li>
             <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link active" aria-current="page" routerLink="/register" routerLinkActive="active">
+              <a class="nav-link active a-nav-link" aria-current="page" routerLink="/register" routerLinkActive="active">
                 Регистрация
               </a>
             </li>
@@ -31,22 +31,22 @@
           <!-- Show this for logged in users -->
           <ul *appShowAuthed="true" class="navbar-nav flex-row flex-wrap ms-md-auto">
             <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link active" aria-current="page" routerLink="/">
+              <a class="nav-link active a-nav-link" aria-current="page" routerLink="/" >
                 Главная
               </a>
             </li>
             <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link active" aria-current="page" routerLink="/filters" routerLinkActive="active">
+              <a class="nav-link active a-nav-link" aria-current="page" routerLink="/filters" >
                 Фильтры
               </a>
             </li>
             <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link active" aria-current="page" routerLink="/notices" routerLinkActive="active">
+              <a class="nav-link active a-nav-link" aria-current="page" routerLink="/notices" >
                 Уведомления
               </a>
             </li>
             <li class="nav-item col-6 col-md-auto dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              <a class="nav-link active dropdown-toggle a-nav-link" href="#" id="navbarDropdownMenuLink" role="button"
                  data-bs-toggle="dropdown" aria-expanded="false">
                 {{ currentUser.name }}
               </a>

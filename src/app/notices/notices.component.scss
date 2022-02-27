@@ -1,39 +1,50 @@
-.container-notices{
-  max-width: 1840px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 60px;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 90%;
-}
-.notices-div {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  max-width: 100%;
-  margin-top: 50px;
+.h1-tittle{
+  margin-top: 4rem;
+  font-weight: bold;
+  line-height: 1.65;
+  font-family: 'avenir next', 'helvetica neue', 'helvetica', 'helvetica', 'arial', sans-serif;
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit;
-  text-align: center !important;
 
-}
-
+//.container-notices{
+//  max-width: 1840px;
+//  margin-left: auto;
+//  margin-right: auto;
+//  padding-bottom: 60px;
+//  padding-left: 15px;
+//  padding-right: 15px;
+//  width: 90%;
+//}
+//.notices-div {
+//  position: relative;
+//  min-height: 1px;
+//  padding-right: 15px;
+//  padding-left: 15px;
+//  max-width: 100%;
+//  margin-top: 50px;
+//}
+//
+//h3 {
+//  font-size: 1.5rem;
+//  margin-bottom: 2.5rem;
+//  font-family: inherit;
+//  font-weight: 500;
+//  line-height: 1.1;
+//  color: inherit;
+//  text-align: center !important;
+//
+//}
+//
 .empty-results-h3 {
   margin-top: 30px;
   font-size: 1.0rem;
   font-weight: lighter;
 }
 
-//////////TABLE-NOTICES///////////
+
+
+
+////////////TABLE-NOTICES///////////
 .mat-elevation-z8 {
   box-shadow: 0px 5px 5px -3px rgba(123, 188, 246, 0.2), 0px 8px 10px 1px rgb(117, 163, 241), 0px 3px 14px 2px rgba(125, 122, 248, 0.12);
 }

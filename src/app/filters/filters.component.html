@@ -1,66 +1,77 @@
-<div class="container page">
-  <h3 class="text-xs-center">Активируйте и сохраните фильтры по которым будет происходить поиск</h3>
+<div class="container vh-100">
+  <div class="text-center">
+    <h1 class="bd-highlight h1-tittle">Активируйте и сохраните фильтры по которым будет происходить поиск</h1>
+  </div>
 
-  <div class="filter-div">
+  <div>
     <app-list-errors [errors]="errors"></app-list-errors>
     <form [formGroup]="filterForm" (ngSubmit)="onSubmitFormFilter()">
       <fieldset class="form-group">
-        <div class="filter-set-div">
-          <h4>Фильтр №1</h4>
-          <input
-            formControlName="filter_first"
-            placeholder="текст для поиска"
-            class="form-control"
-            type="text"/>
-          <label for="subject_choice_first">субъект:</label>
-          <select formControlName="subjects_first" id="subject_choice_first">
+        <div class="input-group mb-3">
+          <span class="input-group-text">Фильтр №1</span>
+          <input type="text" class="form-control input-text-filter" formControlName="filter_first"
+                 placeholder="текст для поиска" aria-label="текст для поиска">
+          <span class="input-group-text span-filter">субъект:</span>
+          <select formControlName="subjects_first" class="form-select select-filter" id="subject_choice_first">
             <option *ngFor="let item of subjectList" value="{{ item }}">{{ item }}</option>
           </select>
-          <input [checked]="isActive_1" id="isActive_1" (change)="onChangeActiveFilter($event)" class="checkbox"
-                 type="checkbox">
-          <h4>{{ isActive_1 ? 'активен' : 'выключен' }}</h4>
+          <div class="input-group-text div-switch">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="isActive_1" [checked]="isActive_1"
+                     (change)="onChangeActiveFilter($event)">
+              <label class="form-check-label" for="isActive_1">{{ isActive_1 ? 'активен' : 'выключен' }}</label>
+            </div>
+          </div>
         </div>
       </fieldset>
 
       <fieldset class="form-group">
-        <div class="filter-set-div">
-          <h4>Фильтр №2</h4>
-          <input
-            formControlName="filter_second"
-            placeholder="текст для поиска"
-            class="form-control"
-            type="text"/>
-          <label for="subject_choice_second">субъект:</label>
-          <select formControlName="subjects_second" id="subject_choice_second">
+        <div class="input-group mb-3">
+          <span class="input-group-text">Фильтр №2</span>
+          <input type="text" class="form-control input-text-filter" formControlName="filter_first"
+                 placeholder="текст для поиска" aria-label="текст для поиска">
+          <span class="input-group-text span-filter">субъект:</span>
+          <select formControlName="subjects_second" class="form-select select-filter" id="subject_choice_second">
             <option *ngFor="let item of subjectList" value="{{ item }}">{{ item }}</option>
           </select>
-
-          <input [checked]="isActive_2" id="isActive_2" (change)="onChangeActiveFilter($event)" type="checkbox">
-          <h4>{{ isActive_2 ? 'активен' : 'выключен' }}</h4>
+          <div class="input-group-text div-switch">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="isActive_2" [checked]="isActive_2"
+                     (change)="onChangeActiveFilter($event)">
+              <label class="form-check-label" for="isActive_1">{{ isActive_2 ? 'активен' : 'выключен' }}</label>
+            </div>
+          </div>
         </div>
+
       </fieldset>
-      <button class="btn-save" type="submit">
-        Сохранить
-      </button>
+      <div class="d-flex justify-content-end">
+        <button class="btn-sm" type="submit">
+          Сохранить
+        </button>
+      </div>
+
     </form>
-    <h4 class="save-done-h4" [hidden]="!isSubmitting">Успешно сохранено</h4>
+    <div class="d-flex justify-content-end">
+      <h4 class="save-done-h4" [hidden]="!isSubmitting">Успешно сохранено</h4>
+    </div>
   </div>
+
   <section class="section-advise">
-    <div class="div-1">
-      <div class="div-2">
-        <div class="div-3">
-          <p><i><b>Советы</b></i></p>
-          <p>
-            1. Самым лучшим фильтром будет фамилия в именительном падеже. Имя и отчество, в материалах дела,
+    <h2><strong>Советы:</strong></h2>
+    <ul class="list-unstyled">
+      <li>
+        <ul>
+          <li class="mb-1">
+            Самым лучшим фильтром будет фамилия в именительном падеже. Имя и отчество, в материалах дела,
             могут быть использованы в сокращенном виде поэтому вариативность поиска будет увеличина.
-          </p>
-          <p>
-            2. Если фамилия или текст имеет частую употребляемость, то вы получите тысячи результатов.
+          </li>
+          <li class="mb-1">
+            Если фамилия или текст имеет частую употребляемость, то вы получите тысячи результатов.
             Например на фамилию "Петров".
             В таких случаях обязательно укажите субьект.
-          </p>
-        </div>
-      </div>
-    </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </section>
 </div>
