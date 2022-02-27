@@ -58,9 +58,9 @@
           <button class="btn-profile-save mb-3" [disabled]="!profileForm.valid" (click)="submitForm()" type="submit">
             Сохранить
           </button>
+          <h4 class="h4-save-result" [hidden]="!isSubmitting">Успешно сохранено</h4>
         </fieldset>
       </form>
-      <h4 [hidden]="!isSubmitting">Успешно сохранено</h4>
     </div>
   </div>
 </div>
