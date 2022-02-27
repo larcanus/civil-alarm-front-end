@@ -1,57 +1,64 @@
 <div class="profile-page">
-  <div class="container page">
-    <div class="row">
-
+  <div class="container vh-100">
       <div class="profile-div">
-        <h3 class="text-xs-center">
-          Ваши данные
-        </h3>
+        <div class="bd-highlight div-title-form">
+          <h1 class="">Ваши данные</h1>
+        </div>
 
-        <app-list-errors [errors]="errors"></app-list-errors>
-        <form [formGroup]="profileForm">
+        <app-list-errors class="error-list" [errors]="errors"></app-list-errors>
+
+        <form [formGroup]="profileForm" class="d-flex justify-content-center">
           <fieldset [disabled]="isSubmitting">
-            <fieldset class="form-group">
+            <fieldset class="form-group mb-3">
+              <label for="nameInput" class="form-label">Ваше имя профиля</label>
               <input
                 formControlName="name"
                 placeholder="Name"
-                class="form-control form-control-lg"
-                type="text"/>
+                class="form-control"
+                type="text"
+                aria-describedby="nameHelp"
+                id="nameInput"/>
+              <div class="form-text">имя отражается в меню и больше нигде не используется</div>
             </fieldset>
-            <fieldset class="form-group">
+
+            <fieldset class="form-group mb-3">
+              <label for="emailInput" class="form-label">Адрес электронной почты</label>
               <input
                 autocomplete="off"
                 formControlName="email"
                 placeholder="Email"
-                class="form-control form-control-lg"
-                type="text"/>
+                class="form-control"
+                type="email"
+                aria-describedby="nameHelp"
+                id="emailInput"/>
+              <div class="form-text">необходим для авторизации и уведомления о полученных результатах</div>
             </fieldset>
-            <button class="btn-profile-psw-edit" [hidden]="isPswEdit" (click)="isPswEdit=true">
+            <button class="btn-profile-psw-edit mb-3" [hidden]="isPswEdit" (click)="isPswEdit=true">
               Сменить пароль
             </button>
-            <fieldset class="form-group" [hidden]="!isPswEdit">
+            <fieldset class="form-group mb-3" [hidden]="!isPswEdit">
               <input
                 autocomplete="new-password"
                 formControlName="password_1"
                 placeholder="new password"
-                class="form-control form-control-lg"
+                class="form-control"
                 type="password"/>
             </fieldset>
-            <fieldset class="form-group" [hidden]="!isPswEdit">
+            <fieldset class="form-group mb-3" [hidden]="!isPswEdit">
               <input
                 autocomplete="new-password"
                 formControlName="password_2"
                 placeholder="new password again"
-                class="form-control form-control-lg"
+                class="form-control"
                 type="password"/>
+              <div class="form-text">длинна пароля не меньше 3 символов</div>
             </fieldset>
-            <button class="btn-profile-save" [disabled]="!profileForm.valid" (click)="submitForm()" type="submit">
+            <button class="btn-profile-save mb-3" [disabled]="!profileForm.valid" (click)="submitForm()" type="submit">
               Сохранить
             </button>
           </fieldset>
         </form>
         <h4 [hidden]="!isSubmitting">Успешно сохранено</h4>
       </div>
-
-    </div>
   </div>
 </div>
