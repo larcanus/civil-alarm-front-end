@@ -49,21 +49,24 @@ export class ProfileComponent implements OnInit {
     if ( credentials.email !== '' && credentials.name !== '' ) {
       if ( this.isPswEdit ) {
         if ( credentials.password_1 !== '' && credentials.password_1 === credentials.password_2 ) {
-          this.updateUser( this.profileForm.value );
-          this.user.password = credentials.password_1;
+          if ( credentials.password_1.length > 3 ) {
+            this.updateUser( this.profileForm.value );
+            this.user.password = credentials.password_1;
 
-
-          this.userService.update( this.user ).subscribe(
-            updatedUser => {
-              this.isSubmitting = true;
-              this.router.navigateByUrl( '/profile' )
-            },
-            err => {
-              this.errors = err;
-              this.isSubmitting = false;
-              this.cd.markForCheck();
-            }
-          );
+            this.userService.update( this.user ).subscribe(
+              updatedUser => {
+                this.isSubmitting = true;
+                this.router.navigateByUrl( '/profile' )
+              },
+              err => {
+                this.errors = err;
+                this.isSubmitting = false;
+                this.cd.markForCheck();
+              }
+            );
+          } else {
+            this.errors = { errors: { '': 'меньше четырех символов' } };
+          }
         } else {
           this.errors = { errors: { '': 'пароли не совпадают' } };
         }
@@ -90,5 +93,4 @@ export class ProfileComponent implements OnInit {
   updateUser( values: Object ) {
     Object.assign( this.user, values );
   }
-
 }
