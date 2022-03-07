@@ -24,6 +24,9 @@
                     <h3 class="h3-res-name"><strong>{{ res.name }}</strong></h3>
                   </div>
                   <div class="col p-2">
+                    {{ res.additionalFields[ 2 ] ? res.additionalFields[ 2 ].value : 'нет данных' }}
+                  </div>
+                  <div class="col p-2">
                     {{ res.additionalFields[ 3 ] ? res.additionalFields[ 3 ].value : 'нет данных' }}
                     {{ res.additionalFields[ 4 ] ? res.additionalFields[ 4 ].value : 'нет данных о суде' }}
                   </div>
