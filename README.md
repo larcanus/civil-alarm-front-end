@@ -56,14 +56,10 @@ ng build --prod
 civil-alarm-front-end/
 ├── src/
 │   ├── app/
-│   │   ├── home/          # Главная страница
-│   │   ├── auth/          # Аутентификация (не работает)
-│   │   ├── profile/       # Профиль пользователя (не работает)
-│   │   └── filters/       # Управление фильтрами (не работает)
 │   ├── assets/
-│   │   └── icons/         # Иконки приложения
-│   ├── index.html         # Главная HTML страница
-│   └── manifest.webmanifest # PWA манифест
+│   ├── environments/
+│   ├── index.html
+│   └── manifest.webmanifest
 ├── README.md
 └── package.json
 ```
